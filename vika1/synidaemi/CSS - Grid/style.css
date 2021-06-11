@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+#container {
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.box {
+    background-color: gold;
+    width: 15rem;
+    height: 5rem;
+    border: 2px solid black;
+}
