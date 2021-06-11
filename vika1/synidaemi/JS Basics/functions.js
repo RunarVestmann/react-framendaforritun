@@ -1,20 +1,13 @@
-const numberArray = [1, 2, 3];
+// Here are 3 ways for creating a function, no one way is better than the other, all that matters is that you are consistant
 
-// map: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
-const changedArray = numberArray.map((value) => value + 10);
-console.log('original array: ', numberArray);
-console.log('mapped array: ', changedArray);
+function firstWay() {
+    console.log('This function has a chance of being overwritten');
+}
 
-// find: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-console.log(
-    'first value in mapped array which is > 11:',
-    changedArray.find((value) => value > 11),
-);
+const secondWay = function () {
+    console.log("This function can't be overwritten and");
+};
 
-// forEach: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
-changedArray.forEach((value, index) => {
-    console.log(value, index);
-});
-
-// filter: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
-console.log(changedArray.filter((value) => value !== 12));
+const thirdWay = () => {
+    console.log("This function can't be overwritten");
+};
