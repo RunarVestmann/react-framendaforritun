@@ -4,13 +4,7 @@ const container = document.getElementById('container');
 const getData = async () => {
     const response = await fetch(API_URL);
     const data = await response.json();
-    return data;
+    return data.results;
 };
 
-getData().then((data) => {
-    data.results.forEach((show) => {
-        const paragraph = document.createElement('p');
-        paragraph.innerHTML = show.title;
-        container.append(paragraph);
-    });
-});
+getData().then((data) => (container.innerHTML = data.map((show) => `<p>${show.title}</p>`).join('')));

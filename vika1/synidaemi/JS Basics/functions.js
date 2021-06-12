@@ -1,13 +1,15 @@
-// Here are 3 ways for creating a function, no one way is better than the other, all that matters is that you are consistant
-
-function firstWay() {
-    console.log('This function has a chance of being overwritten');
+function printHello1() {
+    console.log('Hello');
 }
 
-const secondWay = function () {
-    console.log("This function can't be overwritten and");
+const printHello2 = function () {
+    console.log('Hello');
 };
 
-const thirdWay = () => {
-    console.log("This function can't be overwritten");
+const printHello3 = () => {
+    console.log('Hello');
 };
+
+printHello1();
+printHello2();
+printHello3();

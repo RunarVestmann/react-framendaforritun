@@ -1,20 +1,24 @@
-const numberArray = [1, 2, 3];
-
-// map: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
-const changedArray = numberArray.map((value) => value + 10);
-console.log('original array: ', numberArray);
-console.log('mapped array: ', changedArray);
+const array = [1, 2, 3, 4];
 
 // find: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-console.log(
-    'first value in mapped array which is > 11:',
-    changedArray.find((value) => value > 11),
-);
+const value = array.find((value) => value !== 3);
 
 // forEach: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
-changedArray.forEach((value, index) => {
-    console.log(value, index);
+array.forEach((value) => {
+    console.log(value);
 });
 
+// join: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+console.log(array.join(''));
+
+// map: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+const newArray = array.map((value) => {
+    return value.toString();
+});
+console.log(array);
+console.log(newArray);
+
 // filter: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
-console.log(changedArray.filter((value) => value !== 12));
+const filteredArray = array.filter((value) => value === 3);
+console.log(array);
+console.log(filteredArray);
