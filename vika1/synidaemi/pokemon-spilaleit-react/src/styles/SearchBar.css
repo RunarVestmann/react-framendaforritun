@@ -1,0 +1,9 @@
+#search-bar {
+    margin-top: 1rem;
+}
+
+#search-input {
+    width: 20rem;
+    padding: 0.2rem;
+    margin-right: 1rem;
+}

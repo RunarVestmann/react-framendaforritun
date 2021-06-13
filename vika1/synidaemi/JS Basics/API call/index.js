@@ -4,7 +4,9 @@ const container = document.getElementById('container');
 const getData = async () => {
     const response = await fetch(API_URL);
     const data = await response.json();
-    return data.results;
+    return data;
 };
 
-getData().then((data) => (container.innerHTML = data.map((show) => `<p>${show.title}</p>`).join('')));
+getData().then((data) => {
+    container.innerHTML = data.results.map((show) => `<p>${show.title}    ${show.startTime}</p>`).join('');
+});
