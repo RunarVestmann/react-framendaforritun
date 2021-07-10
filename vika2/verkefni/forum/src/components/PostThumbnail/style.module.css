@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    background-color: white;
+}
+
+.container:hover {
+    border: 1px solid black;
+}
+
+.container p {
+    align-self: flex-start;
+}

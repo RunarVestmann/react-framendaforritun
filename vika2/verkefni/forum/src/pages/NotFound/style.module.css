@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+}
+
+.container p {
+    font-size: 2rem;
+}
